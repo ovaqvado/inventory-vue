@@ -1,30 +1,35 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+	<div class="app_box">
+		<div class="first_box">
+			<left-panel />
+			<inventory-box />
+		</div>
+		<div class="secondary_box"><footer-box /></div>
+	</div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup lang="ts">
+import FooterBox from './components/FooterBox.vue'
+import InventoryBox from './components/InventoryBox.vue'
+import LeftPanel from './components/LeftPanel.vue'
+</script>
+
+<style lang="scss" scoped>
+.app_box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+	height: 100%;
+	width: 100%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.first_box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
 }
 </style>
