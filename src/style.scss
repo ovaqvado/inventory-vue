@@ -1,4 +1,5 @@
 @use './assets/global.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body,
 html {
@@ -11,4 +12,5 @@ html {
 	background-color: $dark-bg-body;
 	min-width: 100vw;
 	min-height: 100vh;
+	font-family: 'Inter', sans-serif;
 }
